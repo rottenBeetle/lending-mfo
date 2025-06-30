@@ -45,7 +45,7 @@ function initDocumentLinks() {
   documentItems.forEach((item) => {
     item.addEventListener("click", function () {
       const docTitle = this.querySelector(".doc-title").textContent;
-      const fileName = documentMap[docTitle];
+      const fileName = documentMap[docTitle.trim()];
 
       if (fileName) {
         // Открываем документ в новой вкладке
